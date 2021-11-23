@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php 
-//PHP TÄNNE
+<?php
 ?>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <body>
         <div class="container">
           <h1>Welcome to Test App</h1>
-          <!--Tänne tulee näytöt-->
+          <?php include 'BasicCalculations.php';?>
         </div>
     </body>
 </html>

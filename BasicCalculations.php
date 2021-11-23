@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="MathTestStyles.css">
-	<body>
-<html>
-	<head>
-	<title>Math Test Final</title>
-	</head>
-<? php
-
-?>
 <h1> Basic Calculations 10 points </h1>
 		
 		<form> <!-- Tähän katsotaan myöhemmin W3Schools ohjeita https://www.w3schools.com/php/php_forms.asp -->
@@ -44,6 +33,3 @@
 			
 			<input type="submit" value="Next page">
 		</form>
-		
-	</body>
-</html>
