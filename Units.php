@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="MathTestStyles.css">
-	<body>
-<html>
-	<head>
-	<title>Math Test Final</title>
-	</head>
-<? php
-
+<?php
+include_once 'header.php';
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+$name = $_POST["name"];
+$studentid =  $_POST["studentid"];
 ?>
+
 <h1> Units 20 Points </h1>
 		
-		<form> <!-- Tähän katsotaan myöhemmin W3Schools ohjeita https://www.w3schools.com/php/php_forms.asp -->
-		
+		<form method="post" action="Percentage.php"> 
+			<input type="hidden" name='name' value="<?php echo $name; ?>">
+			<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
+
 			<p> Change to milligrams </p>
 			
 			<label><b>1.</b> 925 micrograms =</label> 
@@ -83,8 +81,12 @@
 			<label><b>4.</b> 22.45 mm =</label> 
 			<input type="text" id="micrometer4" name="micrometer4"> <br><br>
 			
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit Answers">
 		</form>
-		
-	</body>
-</html>
+
+<?php
+} else {
+	echo '<p> Enter Name and Student Id to take the test</p> <a href="index.php"> To the login page </a>';
+}
+include_once 'footer.php'
+?>

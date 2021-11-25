@@ -1,6 +1,17 @@
+<?php
+include_once 'header.php';
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+$name = $_POST["name"];
+$studentid =  $_POST["studentid"];
+?>
+
 <h1> Basic Calculations 10 points </h1>
 		
-		<form> <!-- Tähän katsotaan myöhemmin W3Schools ohjeita https://www.w3schools.com/php/php_forms.asp -->
+		<form method="post" action="Units.php"> 
+			
+		<input type="hidden" name='name' value="<?php echo $name; ?>">
+		<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
+		
 			<label><b>1.</b> 98 - 56 + 45 =</label> 
 			<input type="text" id="question1" name="question1"> <br><br>
 			
@@ -31,5 +42,12 @@
 			<label><b>10.</b> 8763 X 100 =</label> 
 			<input type="text" id="question10" name="question10"> <br><br>
 			
-			<input type="submit" value="Next page">
+			<input type="submit" value="Submit Answers">
 		</form>
+
+<?php
+} else {
+	echo '<p> Enter Name and Student Id to take the test</p> <a href="index.php"> To the login page </a>';
+}
+include_once 'footer.php'
+?>

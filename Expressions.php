@@ -1,8 +1,17 @@
+<?php
+include_once 'header.php';
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+$name = $_POST["name"];
+$studentid =  $_POST["studentid"];
+?>
+
+
 <h1> Expressions / Simplify/  Division & Multiplication (by 10,100,1000) 10 Points </h1>
 		
-		<form>
-		
-			
+		<form method="post" action="RomanNumbers.php"> 
+			<input type="hidden" name='name' value="<?php echo $name; ?>">
+			<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
+
 			<label><b>1.</b> X + 45 = 35 	What is X? =</label> 
 			<input type="text" id="question1" name="question1"> <br><br>
 			
@@ -37,4 +46,13 @@
 			<label><b>4.</b> 2.29 / 100 =</label> 
 			<input type="text" id="question10" name="question10"> <br><br>
 
+			<input type="submit" value="Submit Answers">
+
 		</form>
+
+<?php
+} else {
+	echo '<p> Enter Name and Student Id to take the test</p> <a href="index.php"> To the login page </a>';
+}
+include_once 'footer.php'
+?>

@@ -1,6 +1,16 @@
+<?php
+include_once 'header.php';
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+$name = $_POST["name"];
+$studentid =  $_POST["studentid"];
+?>
+
+
 <h1> Percentage 10 Points </h1>
 		
-		<form>
+		<form method="post" action="Expressions.php"> 
+			<input type="hidden" name='name' value="<?php echo $name; ?>">
+			<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
 		
 			<p> What is </p> <br>
 			
@@ -36,4 +46,13 @@
 			<label><b>10.</b> 650ml out of 1000ml =</label> 
 			<input type="text" id="question10" name="question10"> <br><br>
 
+			<input type="submit" value="Submit Answers">
+
 		</form>
+
+<?php
+} else {
+	echo '<p> Enter Name and Student Id to take the test</p> <a href="index.php"> To the login page </a>';
+}
+include_once 'footer.php'
+?>
