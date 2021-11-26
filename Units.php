@@ -12,8 +12,6 @@ $tulos2 = $_POST["tulos2"];
 		<form method="post" action="Percentage.php"> 
 			<input type="hidden" name='name' value="<?php echo $name; ?>">
 			<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
-			
-			<h2> <?php echo $tulos; ?> </h2>
 
 			<p> Change to milligrams </p>
 			
@@ -181,7 +179,7 @@ $tulos2 = $_POST["tulos2"];
 			?>
 			
 			<label><b>2.</b>  32 mm =</label> 
-			<input type="text" id="micrometer2" name="micrometer2" value="<?php $micrometer2; ?>> <br><br>
+			<input type="text" id="micrometer2" name="micrometer2" value="<?php $micrometer2; ?>"> <br><br>
 			
 			<?php 
 			if ($micrometer2 == "32000 micrometer") {
@@ -190,7 +188,7 @@ $tulos2 = $_POST["tulos2"];
 			?>
 			
 			<label><b>3.</b> 3.55 mm =</label> 
-			<input type="text" id="micrometer3" name="micrometer3" value="<?php $micrometer3; ?>> <br><br>
+			<input type="text" id="micrometer3" name="micrometer3" value="<?php $micrometer3; ?>"> <br><br>
 			
 			<?php 
 			if ($micrometer3 == "3550 micrometer") {
@@ -199,7 +197,7 @@ $tulos2 = $_POST["tulos2"];
 			?>
 			
 			<label><b>4.</b> 22.45 mm =</label> 
-			<input type="text" id="micrometer4" name="micrometer4" value="<?php $micrometer4; ?>> <br><br>
+			<input type="text" id="micrometer4" name="micrometer4" value="<?php $micrometer4; ?>"> <br><br>
 			
 			<?php 
 			if ($micrometer4 == "22450 micrometer") {
