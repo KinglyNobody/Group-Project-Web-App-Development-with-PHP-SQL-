@@ -8,7 +8,7 @@ $tulos = $_POST["tulos"];
 
 <h1> Basic Calculations 10 points </h1>
 		
-		<form method="post" action="<?php echo $tulos?>;"> 
+		<form method="post" action="Units.php"> 
 			
 		<input type="hidden" name='name' value="<?php echo $name; ?>">
 		<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
@@ -19,6 +19,8 @@ $tulos = $_POST["tulos"];
 			<?php 
 			if ($question1 == "87") {
 			    $tulos = 1;
+			} else{
+			    $tulos = 0;
 			}
 			?>	
 			
