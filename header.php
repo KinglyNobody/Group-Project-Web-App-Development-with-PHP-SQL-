@@ -16,14 +16,3 @@ include 'functions.php';
 
     <body>
         <div class="container">
-            <div class="row" id="header" style="text-align: center;">
-                <div class="col-md-4">
-                    <?php echo date("d.m.Y") . "<br>"; ?>
-                </div>
-                <div class="col-md-4">
-                    <?php echo "TIMER" . "<br>"; ?>
-                </div>
-                <div class="col-md-4">
-                    <?php echo  "NAME" . "<br>"; ?>
-                </div>
-            </div>

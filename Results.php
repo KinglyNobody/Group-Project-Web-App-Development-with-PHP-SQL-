@@ -1,5 +1,6 @@
 <?php
 include_once 'header.php';
+require 'dbconnect.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 $name = $_POST["name"];
 $studentid =  $_POST["studentid"];
@@ -56,17 +57,64 @@ if ($question59 == "XIV") {
 
 if ($question60 == "XLVI") {
 	$result++;
-	
 }
 
-echo $result
+$sqlupdate = "UPDATE `ptest` SET block_5='".$result."' WHERE studentid='".$studentid."'";
+
+if ($conn->query($sqlupdate) === TRUE) {
+		echo "";
+	} else {
+		echo "Error: " . $sqlupdate . "<br>" . $conn->error;
+	};
 ?>
 
 
 <h1> Test Results </h1>
 
 <?php
-} else {
+
+$sqlselect = "SELECT * FROM ptest WHERE studentid='".$studentid."' ";
+
+if ($conn->query($sqlselect)) {
+		$table = $conn -> query($sqlselect);
+		$row = $table -> fetch_array(MYSQLI_ASSOC);
+		$total = $row["block_1"] + $row["block_2"] + $row["block_3"] + $row["block_4"] + $row["block_5"];
+		echo "<p>Total points: ".$total."/60</p>";
+	} else {
+		echo "Error: " . $sqlselect . "<br>" . $conn->error;
+	
+	};
+
+?>
+
+<?php
+}
+else if ($_SERVER['REQUEST_METHOD'] == "GET") {
+	
+	$studentid = clean($_GET['studentid']);
+
+?>
+
+
+<h1> Test Results </h1>
+
+<?php
+
+$sqlselect = "SELECT * FROM ptest WHERE studentid='".$studentid."' ";
+
+if ($conn->query($sqlselect)) {
+		$table = $conn -> query($sqlselect);
+		$row = $table -> fetch_array(MYSQLI_ASSOC);
+		$total = $row["block_1"] + $row["block_2"] + $row["block_3"] + $row["block_4"] + $row["block_5"];
+		echo "<p>Total points: ".$total."/60</p>";
+	} else {
+		echo "Error: " . $sqlselect . "<br>" . $conn->error;
+	
+	};	
+	
+}
+
+else {
 	echo '<p> Enter Name and Student Id to take the test</p> <a href="index.php"> To the login page </a>';
 }
 include_once 'footer.php'

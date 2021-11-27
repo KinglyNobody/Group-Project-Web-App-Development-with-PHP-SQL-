@@ -1,5 +1,6 @@
 <?php
 include_once 'header.php';
+require 'dbconnect.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 $name = $_POST["name"];
 $studentid =  $_POST["studentid"];
@@ -108,7 +109,15 @@ if ($question30 == "22450") {
 	$result++;
 }
 
-echo $result
+$sqlupdate = "UPDATE `ptest` SET block_2='".$result."' WHERE studentid='".$studentid."'";
+
+if ($conn->query($sqlupdate) === TRUE) {
+		echo "";
+	} else {
+		echo "Error: " . $sqlupdate . "<br>" . $conn->error;
+	}
+
+checkTime($studentid);
 ?>
 
 
