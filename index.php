@@ -25,7 +25,7 @@
                 <br>
                 <br>
                 
-                <input type="submit" value="Start Test" name="loging-in" />
+                <input type="submit" value="Start Test" name="login" />
             </form>
         </div>
     </body>

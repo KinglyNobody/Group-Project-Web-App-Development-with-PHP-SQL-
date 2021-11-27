@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+include 'functions.php';
 ?>
 
 <html lang="en">

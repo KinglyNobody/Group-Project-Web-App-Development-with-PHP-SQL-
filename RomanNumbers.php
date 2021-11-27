@@ -3,7 +3,61 @@ include_once 'header.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 $name = $_POST["name"];
 $studentid =  $_POST["studentid"];
-$tulos5 = $_POST["tulos5"];
+$result = 0;
+
+//Answers from Expressions
+$question41 = clean($_POST["question41"]);
+$question42 = clean($_POST["question42"]);
+$question43 = clean($_POST["question43"]);
+$question44 = clean($_POST["question44"]);
+$question45 = clean($_POST["question45"]);
+$question46 = clean($_POST["question46"]);
+$question47 = clean($_POST["question47"]);
+$question48 = clean($_POST["question48"]);
+$question49 = clean($_POST["question49"]);
+$question50 = clean($_POST["question50"]);
+
+//Check Answers from Expressions
+if ($question41 == "-10") {
+	$result++;
+}
+
+if ($question42 == "971") {
+	$result++;
+}
+
+if ($question43 == "8") {
+	$result++;
+}
+
+if ($question44 == "11/16") {
+	$result++;
+}
+
+if ($question45 == "4/25") {
+	$result++;
+}
+
+if ($question46 == "5/12") {
+	$result++;
+}
+
+if ($question47 == "0.00825" or $question47 == "0,00825") {
+	$result++;
+}
+
+if ($question48 == "626.00" or $question48 == "626,00") {
+	$result++;
+}
+
+if ($question49 == "38.70" or $question49 == "38,70") {
+	$result++;
+}
+
+if ($question50 == "0.0229" or $question50 == "0,0229") {
+	$result++;
+}
+echo $result
 ?>
 
 <h1> Roman Numbers 10 Points </h1>
@@ -13,96 +67,34 @@ $tulos5 = $_POST["tulos5"];
 			<input type="hidden" name='studentid' value="<?php echo $studentid; ?>">
 			
 			<label><b>1.</b> IX =</label> 
-			<input type="text" id="question31" name="question31" value="<?php $question31; ?>"> <br><br>
+			<input type="text" id="question51" name="question51"> <br><br>
 			
-			<?php 
-			if ($question31 == "9") {
-			    $tulos5 = 1;
-			} else{
-			    $tulos5 = 0;
-			}
-			?>
-			
-			<label><b>2.</b> XXXIX  =</label> 
-			<input type="text" id="question32" name="question32" value="<?php $question32; ?>"> <br><br>
-			
-			<?php 
-			if ($question32 == "39") {
-			    $tulos5 = 1;
-			}
-			?>
+			<label><b>2.</b> XXXIX =</label> 
+			<input type="text" id="question52" name="question52"> <br><br>
 			
 			<label><b>3.</b> XXII =</label> 
-			<input type="text" id="question33" name="question33" value="<?php $question33; ?>"> <br><br>
-			
-			<?php 
-			if ($question33 == "22") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question53" name="question53"> <br><br>
 			
 			<label><b>4.</b> XVI =</label> 
-			<input type="text" id="question34" name="question34" value="<?php $question34; ?>"> <br><br>
-			
-			<?php 
-			if ($question34 == "16") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question54" name="question54"> <br><br>
 			
 			<label><b>5.</b> XLIV =</label> 
-			<input type="text" id="question35" name="question35" value="<?php $question35; ?>"> <br><br>
-			
-			<?php 
-			if ($question35 == "44") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question55" name="question55"> <br><br>
 			
 			<label><b>6.</b> 48 =</label> 
-			<input type="text" id="question36" name="question36" value="<?php $question36; ?>"> <br><br>
-			
-			<?php 
-			if ($question36 == "XLVIII") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question56" name="question56"> <br><br>
 			
 			<label><b>7.</b> 32 =</label> 
-			<input type="text" id="question37" name="question37" value="<?php $question37; ?>"> <br><br>
-			
-			<?php 
-			if ($question37 == "XXXII") {
-			    $tulos5 = 1;
-			}
-			?>
-			
+			<input type="text" id="question57" name="question57"> <br><br>
+
 			<label><b>8.</b> 20 =</label> 
-			<input type="text" id="question38" name="question38" value="<?php $question38; ?>"> <br><br>
-			
-			<?php 
-			if ($question38 == "XX") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question58" name="question58"> <br><br>
 			
 			<label><b>9.</b> 14 =</label> 
-			<input type="text" id="question39" name="question39" value="<?php $question39; ?>"> <br><br>
-			
-			<?php 
-			if ($question39 == "XIV") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question59" name="question59"> <br><br>
 			
 			<label><b>10.</b> 46 =</label> 
-			<input type="text" id="question40" name="question40" value="<?php $question40; ?>"> <br><br>
-
-			<?php 
-			if ($question40 == "XLVI") {
-			    $tulos5 = 1;
-			}
-			?>
+			<input type="text" id="question60" name="question60"> <br><br>
 
 			<input type="submit" value="Submit Answers">
 
