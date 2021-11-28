@@ -3,22 +3,34 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	font-family: Helvetica;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
 h1{
 	padding-bottom: 5px;
 	text-align: center;
 	font-size: 50px;
+	font-variant: small-caps;
+
+}
+p{
+	font-size: 25px;
+	font-weight: bold;
 }
 form{
 	text-align: left;
 }
 input[type=text]{
+	max-width: 100px;
 	border-color: black;
+	margin: auto;
 }
 input[type=submit]{
 	color: white;
 	border-color: black;
 	background: black;
+	padding: 10px;
+	
 }
 label{
 	padding-bottom: 5px;
