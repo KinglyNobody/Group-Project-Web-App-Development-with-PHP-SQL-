@@ -106,7 +106,7 @@ if ($conn->query($sqlselect)) {
 		$table = $conn -> query($sqlselect);
 		$row = $table -> fetch_array(MYSQLI_ASSOC);
 		$total = $row["block_1"] + $row["block_2"] + $row["block_3"] + $row["block_4"] + $row["block_5"];
-		echo "<p>Total points: ".$total."/60</p>";
+		echo "<p id="TotalPoints">Total points: ".$total."/60</p>";
 	} else {
 		echo "Error: " . $sqlselect . "<br>" . $conn->error;
 	
