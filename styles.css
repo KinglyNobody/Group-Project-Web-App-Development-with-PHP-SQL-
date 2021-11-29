@@ -13,6 +13,11 @@ h1{
 	font-variant: small-caps;
 
 }
+#TotalPoints{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
 p{
 	font-size: 25px;
 	font-weight: bold;
